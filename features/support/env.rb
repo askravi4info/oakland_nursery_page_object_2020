@@ -6,7 +6,6 @@ World(PageObject::PageFactory)
 
 # oakland_test = 'www.oaklandtest.com'
 # oakland_int = 'www.oaklandint.com'
-# oakland_qa = 'www.oaklandqa.com'
 
 if ENV['environment'].nil?
   env = 'qa'
