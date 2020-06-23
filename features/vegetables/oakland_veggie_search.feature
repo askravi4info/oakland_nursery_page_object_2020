@@ -1,5 +1,7 @@
+@veggie_search
 Feature: Veggie Search
 
+  @smoke
   Scenario: Search for the organic veggie
     Given I am on Okaland Feature:
 

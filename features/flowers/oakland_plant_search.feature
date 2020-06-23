@@ -1,13 +1,16 @@
+@plant_search
 Feature: Oakland Plant Search
 
   Background:
     Given user is on plant search page
 
+  @smoke
   Scenario: Verify the user can search for the plant
     When user search for the plant Rose
     Then user should see the results related to Rose
-    And verify the search results count is not more than 10
+    And verify the search results count is not more than 15
 
+  @regression
   Scenario Outline: Verify the user can search for different plants
     When user search for the plant <plant_name>
     Then user should see the results related to <plant_name>
@@ -15,8 +18,9 @@ Feature: Oakland Plant Search
     Examples:
       | plant_name | no_of_results |
       | Rose       | 10            |
-      | Sunflower  | 10            |
+      | Sunflower  | 15            |
 
+  @jira-345
   Scenario Outline: Verify the user can search for different plants with details
     When user search for the plant <plant_name>
     Then user should see the results related to <plant_name>
@@ -78,3 +82,7 @@ Feature: Oakland Plant Search
     When user search for the plant Rose
     Then user should see the results related to Rose
     And verify the details of the Rose are correct
+
+  @wip
+  Scenario: to do test
+    When fdjfklasfjsd

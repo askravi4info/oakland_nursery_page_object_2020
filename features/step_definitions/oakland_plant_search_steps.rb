@@ -11,7 +11,7 @@ Then(/^user should see the results related to (.+)$/) do |plant_name|
 end
 
 And(/^verify the search results count is not more than (\d+)$/) do |max_results|
-  on(OakPlantSearchPage).verify_no_of_plant_search_results
+  on(OakPlantSearchPage).verify_no_of_plant_search_results max_results
 end
 
 And(/^user add the first result to the wish list$/) do
