@@ -1,12 +1,10 @@
   <%
     html_path = "#{Time.now.strftime("%m-%d_%H-%M-%S")}_report.html"
-    json_path = "#{Time.now.strftime("%m-%d_%H-%M-%S")}_report.json"
     env = "#{ENV['browser_type']}"
     std_opts = "--tags ~@wip --tags ~@manual -r features -r features/support/env.rb  "
     %>
 
-#  default: --no-source --color --format pretty --format html --out <%= html_path %> --format json --out <%= json_path %>
-  default: --no-source --color --format pretty --format html --out <%= html_path %> --format json -o cucumber.json
-  smoke: --no-source --color --format pretty --format html --out <%= html_path %> --tags @smoke --format json --out <%= json_path %>
+  default: --no-source --color --format pretty --format html --out <%= html_path %>
+  smoke: --no-source --color --format pretty --format html --out <%= html_path %> --tags @smoke
   regression: --no-source --color --format pretty --format html --out <%= html_path %> --tags @regression
   regression_ie: --no-source --color --format pretty --format html --out <%= html_path %> --tags @regression
