@@ -5,6 +5,6 @@
     %>
 
   default: --no-source --color --format pretty --format html --out <%= html_path %>
-  smoke: --no-source --color --format pretty --format html --out <%= html_path %> --tags @smoke
+  smoke: --no-source --color --format pretty --format html --out <%= html_path %> --tags @smoke --format html --out cucumber.json
   regression: --no-source --color --format pretty --format html --out <%= html_path %> --tags @regression
   regression_ie: --no-source --color --format pretty --format html --out <%= html_path %> --tags @regression
